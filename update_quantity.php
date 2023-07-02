@@ -33,6 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="number" name="quantity" id="quantity" required>
 
     <button type="submit">Actualizar</button>
+
   </form>
+
+  <!--Boton para volver a la pagina anteriror -->
+  <button onclick="goBack()">Volver</button>
+
+<script>
+function goBack() {
+  history.back();
+}
+</script>
 </body>
 </html>

@@ -26,6 +26,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
   <h1>Eliminar Producto</h1>
 
+   <button onclick="goBack()">Volver</button>
+
+<script>
+function goBack() {
+  history.back();
+}
+</script>
+
   <ul>
     <?php foreach ($products as $product): ?>
       <li><?php echo $product['product_name']; ?>
