@@ -2,19 +2,6 @@
 require 'database.php';
 require 'inventory_functions.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $productName = $_POST['product_name'];
-  $quantity = $_POST['quantity'];
-  $price = $_POST['price'];
-  $imageURL = $_POST['image_url'];
-
-  // Llamar a la función addProduct con la ruta de imagen
-  if (addProduct($productName, $quantity, $price, $imageURL)) {
-    echo 'Producto agregado exitosamente.';
-  } else {
-    echo 'Error al agregar el producto.';
-  }
-}
 
 // Obtener los productos de la base de datos
 $products = getProducts();
